@@ -3,6 +3,7 @@ html(lang="ru-RU")
 	head
 		meta(charset="utf-8")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
 		title Гипсолит
 
@@ -13,17 +14,17 @@ html(lang="ru-RU")
 			.container
 				.header
 					.row.align-items-center
-						.col-xl-3
+						.col-lg-3.col-md-4.col-xs-12
 							.logo
 								img(src="static/img/logo.png" alt="Гипсолит. Штукатурка стен")
-						.col-xl-2.offset-xl-4
-								a.header__phone(href="#") +7 495 771 05 08
-						.col-xl-3
-							button.btn.header__btn получить консультацию
+						.col-xl-2.offset-xl-4.col-lg-3.offset-lg-3.col-md-4.offset-md-0.col-xs-12
+							a.header__phone(href="#") +7 495 771 05 08
+						.col-lg-3.col-md-4.col-xs-12
+							button.btn.header__btn(type="submit") получить консультацию
 
 				.header__main
 					.row
-						.col-xl-6
+						.col-lg-6.col-md-12
 							.header__content
 								h1.header__title Автоматизированная штукатурка стен
 								p.header__description
@@ -37,7 +38,7 @@ html(lang="ru-RU")
 									| руб/м
 									sup 2
 								strong.header__trigger Оплата по факту!	
-						.col-xl-4.offset-xl-2
+						.col-xl-4.offset-xl-2.col-lg-5.offset-lg-1.col-md-8.offset-md-2.col-10.offset-1
 							.main__form
 								h2.form__title Для расчёта точной стоимости 
 									br 
@@ -50,6 +51,10 @@ html(lang="ru-RU")
 									input.form__input(type='text')
 									button.btn.form__btn(type='submit') Оставьте заявку
 									small.form__small подарок в день обращения*
+							p.form__description 
+								span * - выезды на замер осуществляются 
+								|	в рабоче дни Пн-Пт с 9:00 до 18:00
+	
 	
 
 
