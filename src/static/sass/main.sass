@@ -38,7 +38,7 @@ button, input, a
 .btn 
 	background-color: $btn
 	color: $light
-	padding: 1rem 3rem
+	padding: 1.5rem 3rem
 	text-transform: uppercase
 	text-decoration: none
 	box-shadow: 0 8px 13px rgba(0, 0, 0, 0.04)
@@ -157,12 +157,16 @@ button, input, a
 	span
 		display: block	
 
+@media (max-width: 1200px)
+	.header__btn
+		padding: 1rem 3rem
+
 @media (max-width: 991px) 
 	.main
 		background-position: top right
 	.header__phone
 		display: block
-		text-align: center	
+		text-align: center		
 	.header__main
 		margin-top: 4rem
 		text-align: center
@@ -175,9 +179,11 @@ button, input, a
 	.header
 		text-align: center
 	.header__phone
-		margin-top: 2rem
-	.header__btn
 		margin-top: 3rem
+	.header__btn
+		margin-top: 4rem
+		font-size: 2rem
+		padding: 2rem 4rem
 	.header__title
 		font-size: 3.2rem
 	.header__description
