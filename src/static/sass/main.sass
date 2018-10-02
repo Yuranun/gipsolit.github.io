@@ -22,10 +22,15 @@ html
 	font-size: 10px
 
 body
+	margin: 0
+	padding: 0
 	font-family: $reg
 
 .main
 	padding: 1.5rem 0
+	height: 100vh
+	background: url(../img/main-bg.jpg) top center no-repeat
+	background-size: cover
 
 .btn 
 	background-color: $btn
@@ -36,7 +41,6 @@ body
 	border-radius: 8px
 	border: 1px solid #ffba15
 	background-image: linear-gradient(to top, #f5ad00 0%, #ffb504 100%)
-
 
 .header__phone
 	display: inline-block
@@ -72,7 +76,7 @@ body
 .header__value 
 	display: inline-block
 	margin-bottom: 3rem
-	padding: 2rem 3rem 2rem 3rem
+	padding: 2rem 4rem 2rem 4rem
 	background-color: #70c849
 	font-family: $reg
 	font-size: 2rem
@@ -88,19 +92,41 @@ body
 	text-transform: uppercase
 
 .main__form
-	padding: 4rem 5rem
+	padding: 4rem 4rem
 	background-color: $light
 	text-align: center
 
 .form__title
+	margin-bottom: 4rem
 	font-family: $reg
 	font-weight: normal
-	font-size: 1.6rem
+	font-size: 1.8rem
 	strong
 		font-weight: bold
 
 .form__input
 	display: block
+	margin: 2rem 0
 	width: 100%
-	padding: 1rem
-	border: 1px solid $border-input		
+	padding: 1.5rem
+	border: 1px solid $border-input	
+	border-radius: 5px	
+
+.form__label
+	display: inline-block
+	padding: 0.5rem
+	position: absolute
+	left: 50%
+	transform: translateX(-50%) translateY(-50%)
+	background-color: $light
+	font-size: 1.3rem	
+
+.form__btn
+	display: block
+	width: 100%
+	font-family: $bold
+
+.form__small
+	display: block
+	margin: 1.5rem
+	font-size: 1.3rem	
