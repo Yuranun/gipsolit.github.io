@@ -14,13 +14,22 @@ html(lang="ru-RU")
 			.container
 				.header
 					.row.align-items-center
-						.col-lg-3.col-md-4.col-xs-12
+						.col-lg-3.col-md-4.col-12.order-3.order-sm-1
 							.logo
 								img(src="static/img/logo.png" alt="Гипсолит. Штукатурка стен")
-						.col-xl-2.offset-xl-4.col-lg-3.offset-lg-3.col-md-4.offset-md-0.col-xs-12
+						.col-xl-2.offset-xl-4.col-lg-3.offset-lg-3.col-md-4.offset-md-0.col-sm-12.col-6.order-1.order-sm-2
 							a.header__phone(href="#") +7 495 771 05 08
-						.col-lg-3.col-md-4.col-xs-12
-							button.btn.header__btn(type="submit") получить консультацию
+						.col-lg-3.col-md-4.col-sm-12.col-6.order-2.order-sm-3
+							button.btn.header__btn(type="submit") 
+								span.xl получить консультацию
+								span.sm консультация
+				//-.row.align-items-center
+					.col-6.d-block.d-sm-none
+						a.header__phone(href="#") +7 495 771 05 08
+					.col-6.d-block.d-sm-none
+						button.btn.header__btn-mobile(type="submit") консультация
+
+
 
 				.header__main
 					.row
@@ -38,7 +47,7 @@ html(lang="ru-RU")
 									| руб/м
 									sup 2
 								strong.header__trigger Оплата по факту!	
-						.col-xl-4.offset-xl-2.col-lg-5.offset-lg-1.col-md-8.offset-md-2.col-10.offset-1
+						.col-xl-4.offset-xl-2.col-lg-5.offset-lg-1.col-md-8.offset-md-2.col-12
 							.main__form
 								h2.form__title Для расчёта точной стоимости 
 									br 
@@ -56,9 +65,5 @@ html(lang="ru-RU")
 								|	в рабоче дни Пн-Пт с 9:00 до 18:00
 	
 	
-
-
-
-
-		//- script(src="static/js/libs.min.js")
-		//- script(src="static/js/main.js")
+	script(src="static/js/libs.min.js")
+	script(src="static/js/main.js")
