@@ -160,6 +160,52 @@ button, input, a
 	span
 		display: block	
 
+// Оформление секции с преимуществами
+
+.features__title
+	margin: 10rem 0
+	font-family: $bold
+	font-size: 3.6rem
+	text-align: center
+
+.features__item
+	text-align: center
+	h3
+		font-family: $bold
+		font-size: 2rem
+	img
+		height: 8rem
+		padding-bottom: 3rem		
+		display: block
+		margin: 0 auto
+	p
+		display: inline-block
+		width: 80%
+		font-size: 1.4rem		
+	span
+		display: block	
+
+.slick-active
+	outline: none
+
+.prev
+	left: 0
+	background: url(../img/arrow__left.svg) center no-repeat
+	background-size: 70%	
+
+.arrow
+	top: 50%			
+	transform: translateY(-50%)
+	position: absolute
+	width: 2rem
+	height: 2rem
+	border: none	
+	z-index: 99
+
+.next
+	right: 0
+	background: url(../img/arrow__right.svg) center no-repeat	
+	background-size: 70%
 
 // Медиа-запросы
 
@@ -170,7 +216,7 @@ button, input, a
 @media (max-width: 991px) 
 	.main
 		background-position: top right
-	.header__phone
+	.header__phone //? проверить пользу запроса
 		display: block
 		text-align: center		
 	.header__main

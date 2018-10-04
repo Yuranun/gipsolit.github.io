@@ -23,13 +23,6 @@ html(lang="ru-RU")
 							button.btn.header__btn(type="submit") 
 								span.xl получить консультацию
 								span.sm консультация
-				//-.row.align-items-center
-					.col-6.d-block.d-sm-none
-						a.header__phone(href="#") +7 495 771 05 08
-					.col-6.d-block.d-sm-none
-						button.btn.header__btn-mobile(type="submit") консультация
-
-
 
 				.header__main
 					.row
@@ -63,7 +56,38 @@ html(lang="ru-RU")
 							p.form__description 
 								span * - выезды на замер осуществляются 
 								|	в рабоче дни Пн-Пт с 9:00 до 18:00
-	
-	
+		section.features
+			.container
+				h2.features__title Преимущества работы с нами
+				.features__slider
+					.features__item
+						picture
+							source(srcset="static/img/coin.svg" type="image/")
+							img(src="static/img/coin.png" alt="Платите по факту")
+						h3 Платите по факту
+						p Вы оплачиваете выполненные работы только после их выполнения. 
+							span Никаких скрытых доплат и промежуточных платежей.
+
+					.features__item
+						picture
+							source(srcset="static/img/folder.svg" type="image/")
+							img(src="static/img/folder.png" alt="Заключаем договор")
+						h3 Заключаем договор
+						p Перед началом работ заключаем договор на юридическое лицо. 
+							span Вы можете быть уверены, что все обязательства будут выполнены.
+
+					.features__item
+						picture
+							source(srcset="static/img/clock.svg" type="image/")
+							img(src="static/img/clock.png" alt="Точно в срок")
+						h3 Точно в срок
+						p Работаем строго по установленным срокам, которые прописаны в договоре. Если не успеваем, Вы платите меньше
+					.features__item
+						picture
+							source(srcset="static/img/piggy_bank.svg" type="image/")
+							img(src="static/img/piggy_bank.png" alt="Экономите на материалах")
+						h3 Экономите на материалах
+						p Мы являемся структурным подразделением компании поставщика строительных смесей gicema.ru  и даём Вам самые выгодные цены.
+
 	script(src="static/js/libs.min.js")
 	script(src="static/js/main.js")
