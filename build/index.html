@@ -18,7 +18,7 @@
             </div>
             <div class="col-xl-2 offset-xl-4 col-lg-3 offset-lg-3 col-md-4 offset-md-0 col-sm-12 col-6 order-1 order-sm-2"><a class="header__phone" href="#">+7 495 771 05 08</a></div>
             <div class="col-lg-3 col-md-4 col-sm-12 col-6 order-2 order-sm-3">
-              <button class="btn header__btn" type="submit"> <span class="xl">получить консультацию</span><span class="sm">консультация</span></button>
+              <button class="btn header__btn popup__btn" type="submit"> <span class="xl">получить консультацию</span><span class="sm">консультация</span></button>
             </div>
           </div>
         </div>
@@ -83,6 +83,26 @@
         </div>
       </div>
     </section>
+    <div class="popup">
+      <div class="popup__dialog">
+        <div class="popup__content">
+          <button class="popup__close">&times;</button>
+          <h4 class="popup__header">Заинтересовало?</h4>
+          <p>Оставьте контактные данные для связи</p>
+          <div class="main__form popup__form">
+            <form action="#">
+              <label class="form__label" for="#">Ваше имя</label>
+              <input class="form__input" type="text">
+              <label class="form__label" for="#">Номер телефона</label>
+              <input class="form__input" type="text">
+              <label class="form__label" for="#">Сообщение</label>
+              <textarea class="form__input textarea"></textarea>
+              <button class="btn main__form-btn" type="submit">Оставьте заявку	</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="static/js/libs.min.js"></script>
   <script src="static/js/main.js"></script>

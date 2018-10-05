@@ -20,7 +20,7 @@ html(lang="ru-RU")
 						.col-xl-2.offset-xl-4.col-lg-3.offset-lg-3.col-md-4.offset-md-0.col-sm-12.col-6.order-1.order-sm-2
 							a.header__phone(href="#") +7 495 771 05 08
 						.col-lg-3.col-md-4.col-sm-12.col-6.order-2.order-sm-3
-							button.btn.header__btn(type="submit") 
+							button.btn.header__btn.popup__btn(type="submit") 
 								span.xl получить консультацию
 								span.sm консультация
 
@@ -88,6 +88,24 @@ html(lang="ru-RU")
 							img(src="static/img/piggy_bank.png" alt="Экономите на материалах")
 						h3 Экономите на материалах
 						p Мы являемся структурным подразделением компании поставщика строительных смесей gicema.ru  и даём Вам самые выгодные цены.
+		
+		.popup
+			.popup__dialog
+				.popup__content
+					button.popup__close &times;
+					h4.popup__header Заинтересовало?
+					p Оставьте контактные данные для связи
+					.main__form.popup__form
+						form(action="#")
+							label.form__label(for='#') Ваше имя
+							input.form__input(type='text')
+							label.form__label(for='#') Номер телефона
+							input.form__input(type='text')
+							label.form__label(for='#') Сообщение
+							textarea.form__input.textarea
+							button.btn.main__form-btn(type='submit') Оставьте заявку	
 
+	
+						
 	script(src="static/js/libs.min.js")
 	script(src="static/js/main.js")

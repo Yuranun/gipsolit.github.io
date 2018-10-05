@@ -1,4 +1,12 @@
 $(document).ready(function () {
+	$('.popup__btn').on('click', function(event) {
+			event.preventDefault();
+			$('.popup').fadeIn();			
+	});
+	$('.popup__close').on('click', function(event) {
+		event.preventDefault();
+		$('.popup').fadeOut();
+	});
 	$('.features__slider').slick({
 		infinite: true,
 		slidesToShow: 4,

@@ -27,7 +27,7 @@ body
 	padding: 0
 	font-family: $reg
 
-button, input, a 
+button, input, a, textarea 
 	&:focus
 		outline: none
 
@@ -130,9 +130,13 @@ button, input, a
 	display: block
 	margin: 2rem 0
 	width: 100%
-	padding: 1.5rem
+	padding: 1.5rem 3rem
 	border: 1px solid $border-input	
-	border-radius: 5px	
+	border-radius: 5px
+
+.textarea
+	padding: 4rem 3rem		
+
 // Подсказки формы
 .form__label
 	display: inline-block
@@ -191,7 +195,8 @@ button, input, a
 .prev
 	left: 0
 	background: url(../img/arrow__left.svg) center no-repeat
-	background-size: 70%	
+	background-size: 70%
+	opacity: 0.3	
 
 .arrow
 	top: 50%			
@@ -206,6 +211,52 @@ button, input, a
 	right: 0
 	background: url(../img/arrow__right.svg) center no-repeat	
 	background-size: 70%
+	opacity: 0.3
+
+// Оформление всплывающих окон
+
+.popup
+	display: none
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	z-index: 9	
+	background-color: rgba(0, 0, 0, 0.5)
+	.popup__dialog
+		.popup__content
+			position: fixed	
+			top: 10%
+			left: 50%
+			background-color: $light
+			transform: translateX(-50%)
+			padding: 2rem 5rem
+			text-align: center
+			.popup__close
+				cursor: pointer
+				position: absolute
+				top: -1rem
+				right: -2rem
+				width: 2rem
+				text-align: center
+				border: none
+				background-color: transparent 
+				font-size: 3rem
+				color: $light
+			.popup__header
+				margin-top: 4rem
+				font-family: $bold
+				font-size: 1.8rem
+			p 
+				font-size: 1.8rem
+				max-width: 245px
+
+.popup__form
+	padding: 2rem 2rem	
+
 
 // Медиа-запросы
 
