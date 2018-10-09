@@ -27,6 +27,9 @@ body
 	padding: 0
 	font-family: $reg
 
+h2 
+	margin: 0
+
 button, input, a, textarea 
 	&:focus
 		outline: none
@@ -34,6 +37,7 @@ button, input, a, textarea
 // Базовая стилизация кнопки
 
 .btn 
+	font-family: $reg
 	background-color: $btn
 	color: $light
 	padding: 1.5rem 3rem
@@ -113,7 +117,7 @@ button, input, a, textarea
 	font-weight: bold
 	text-transform: uppercase
 // Форма отправки шапки
-.main__form
+.form__main
 	padding: 4rem 4rem
 	background-color: $light
 	text-align: center
@@ -166,28 +170,29 @@ button, input, a, textarea
 
 // Оформление секции с преимуществами
 
-.features__title
-	margin: 10rem 0
-	font-family: $bold
-	font-size: 3.6rem
-	text-align: center
-
-.features__item
-	text-align: center
-	h3
+.features
+	margin-bottom: 12rem
+	&__title
+		margin: 10rem 0
 		font-family: $bold
-		font-size: 2rem
-	img
-		height: 8rem
-		padding-bottom: 3rem		
-		display: block
-		margin: 0 auto
-	p
-		display: inline-block
-		width: 80%
-		font-size: 1.4rem		
-	span
-		display: block	
+		font-size: 3.6rem
+		text-align: center
+	&__item
+		text-align: center
+		h3
+			font-family: $bold
+			font-size: 2rem
+		img
+			height: 8rem
+			padding-bottom: 3rem		
+			display: block
+			margin: 0 auto
+		p
+			display: inline-block
+			width: 80%
+			font-size: 1.4rem		
+		span
+			display: block	
 
 .slick-active
 	outline: none
@@ -226,39 +231,120 @@ button, input, a, textarea
 	height: 100%
 	z-index: 9	
 	background-color: rgba(0, 0, 0, 0.5)
-	.popup__dialog
-		.popup__content
-			position: fixed	
-			top: 10%
-			left: 50%
-			background-color: $light
-			transform: translateX(-50%)
-			padding: 2rem 5rem
-			text-align: center
-			.popup__close
-				cursor: pointer
-				position: absolute
-				top: -1rem
-				right: -2rem
-				width: 2rem
-				text-align: center
-				border: none
-				background-color: transparent 
-				font-size: 3rem
-				color: $light
-			.popup__header
-				margin-top: 4rem
-				font-family: $bold
-				font-size: 1.8rem
-			p 
-				font-size: 1.8rem
-				max-width: 245px
+	&__content
+		position: fixed	
+		top: 10%
+		left: 50%
+		background-color: $light
+		transform: translateX(-50%)
+		padding: 2rem 5rem
+		text-align: center
+	&__close
+		cursor: pointer
+		position: absolute
+		top: -1rem
+		right: -2rem
+		width: 2rem
+		text-align: center
+		border: none
+		background-color: transparent 
+		font-size: 3rem
+		color: $light
+	&__header
+		margin-top: 4rem
+		font-family: $bold
+		font-size: 1.8rem
+	p 
+		font-size: 1.8rem
+		max-width: 245px
 
 .popup__form
 	padding: 2rem 2rem	
 
+.price
+	background: $icons url(../img/prices_bg.jpg) center
+	&__title
+		color: $light
+		h2
+			font-family: $bold
+		p
+			font-family: $reg
+			font-size: 1.4rem
+	&__btn
+		font-family: $reg
+		margin-top: 12rem
+		text-align: right	
+	&__item
+		padding: 2rem 3rem 4rem
+		min-height: 50rem
+		background-color: $light
+		box-shadow: 0 14px 21px rgba(0, 0, 0, 0.17)
+		text-align: center
+		color: #1a1820
+		margin-bottom: 10rem	
+		img
+			width: 100%
+			max-width: 30rem
+			display: inline-block
+			margin-bottom: 3rem
+		.item__title
+			margin: 3rem 0
+			font-family: $bold
+			font-size: 1.9rem
+		.item__btn
+			padding: 2rem 6rem	
+	&__tag
+		display: block
+		font-family: $bold
+		font-size: 1.9rem	
+	&__list
+		padding: 0
+		list-style-type: none
+		min-height: 14rem
+		font-size: 1.6rem
+		line-height: 1.6
+		li
+			&:before
+				content: ''
+				display: inline-block
+				margin-right: 1rem
+				width: 1.4rem
+				height: 1.4rem
+				background: url(../img/tick.svg) center no-repeat
+				background-size: 100%
+				vertical-align: middle	
 
-// Медиа-запросы
+.accordion
+	margin: 1rem 0
+	display: none
+	h2
+		font-family: $reg
+		font-size: 2rem
+		font-weight: normal
+		text-decoration: underline
+		background-color: #fff
+		color: #006b00
+		cursor: pointer
+	ul
+		padding: 0
+		list-style-type: none
+		min-height: 14rem
+		font-size: 1.6rem
+		line-height: 1.6
+	li
+		&:before
+			content: ''
+			display: inline-block
+			margin-right: 1rem
+			width: 1.4rem
+			height: 1.4rem
+			background: url(../img/tick.svg) center no-repeat
+			background-size: 100%
+			vertical-align: middle	
+	&__content
+		display: none
+
+// ---------- Медиа-запросы
 
 @media (max-width: 1200px)
 	.header__btn
@@ -275,6 +361,15 @@ button, input, a, textarea
 		text-align: center
 	.header__content
 		margin-bottom: 4rem	
+	.price
+		&__btn
+			text-align: center
+			padding: 2rem 0
+			margin-top: 0
+			margin-bottom: 5rem
+	.features__title
+		margin: 0
+		padding-top: 10rem
 
 @media (max-width: 767px)
 	.main 
@@ -309,14 +404,33 @@ button, input, a, textarea
 	.sm 
 		display: none				
    	 
-@media (max-width: 420px)	
+@media (max-width: 420px)
+	.header__phone 
+		font-size: 1.6em	
 	.header__title
 		font-size: 2.4rem	
 	.header__description
-		font-size: 2rem	
+		font-size: 1.8rem	
 	.header__btn
-		padding: 1.5rem 2rem			
+		padding: 1.5rem 1.5rem
+	.features__title
+		padding-top: 4.5rem
+		padding-bottom: 5rem		
 	.xl
 		display: none
 	.sm 
-		display: block		
+		display: block
+	.price__title
+		h2
+			font-size: 3rem
+		p	
+			font-size: 2rem
+	.price__item		
+		.item__title
+			font-size: 1.5rem
+		.item__btn
+			margin-top: 2rem			
+		.price__list
+			display: none
+		.accordion
+			display: block	

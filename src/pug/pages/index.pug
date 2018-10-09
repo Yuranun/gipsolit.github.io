@@ -8,6 +8,7 @@ html(lang="ru-RU")
 		title Гипсолит
 
 		link(rel="stylesheet" href="static/css/bootstrap-grid.min.css")
+		link(rel="stylesheet" href="static/css/fotorama.css")
 		link(rel="stylesheet" href="static/css/main.css")
 	body
 		main.main
@@ -41,7 +42,7 @@ html(lang="ru-RU")
 									sup 2
 								strong.header__trigger Оплата по факту!	
 						.col-xl-4.offset-xl-2.col-lg-5.offset-lg-1.col-md-8.offset-md-2.col-12
-							.main__form
+							.form__main
 								h2.form__title Для расчёта точной стоимости 
 									br 
 									|	закажите 
@@ -87,15 +88,111 @@ html(lang="ru-RU")
 							source(srcset="static/img/piggy_bank.svg" type="image/")
 							img(src="static/img/piggy_bank.png" alt="Экономите на материалах")
 						h3 Экономите на материалах
-						p Мы являемся структурным подразделением компании поставщика строительных смесей gicema.ru  и даём Вам самые выгодные цены.
+						p Мы являемся структурным подразделением компании поставщика строительных смесей gicema.ru и даём Вам самые выгодные цены.
 		
+		section.price
+			.container
+				.row
+					.col-lg-4.offset-lg-4
+						.features__title.price__title
+							h2 Цены
+							p Выберите вариант, который подходит Вам:
+					.col-lg-4
+						.price__btn
+							button.btn(data-toggle="modal") Рассчитать точую стоимость
+				.row
+					.col-lg-4.offset-lg-0.col-sm-8.offset-sm-2.d-flex.justify-content-center.align-items-center
+						.price__item
+							h4.item__title Штукатурка вашим материалом
+							img(src="static/img/price_img-1.jpg" alt="Штукатурка вашим материалом")
+							span.price__tag от 300 руб/м
+								sup 2
+							ul.price__list
+								li Проведение работ
+								li Уборка
+							.accordion
+								h2 Что входит в стоимость? 
+								ul
+									li Проведение работ
+									li Уборка
+							button.btn.item__btn Заказать
+					.col-lg-4.offset-lg-0.col-sm-8.offset-sm-2.d-flex.justify-content-center.align-items-center
+						.price__item
+							h4.item__title Штукатурка под шпаклёвку
+							img(src="static/img/price_img-2.jpg" alt="Штукатурка под шпаклёвку")
+							span.price__tag от 530 руб/м
+								sup 2
+							ul.price__list
+								li Завоз материала и его подъём
+								li Проведение работ
+								li Уборка
+								li Гарантия 2 года
+							.accordion
+								h2 Что входит в стоимость? 
+								ul
+									li Завоз материала и его подъём
+									li Проведение работ
+									li Уборка
+									li Гарантия 2 года
+							button.btn.item__btn Заказать	
+					.col-lg-4.offset-lg-0.col-sm-8.offset-sm-2.d-flex.justify-content-center.align-items-center
+						.price__item
+							h4.item__title Штукатурка под обои
+							img(src="static/img/price_img-3.jpg" alt="Штукатурка под обои")
+							span.price__tag от 560 руб/м
+								sup 2
+							ul.price__list
+								li Завоз материала и его подъём
+								li Проведение работ
+								li Уборка
+								li Гарантия 2 года
+								li Можно сразу клеить обои
+							.accordion
+								h2 Что входит в стоимость? 
+								ul
+									li Завоз материала и его подъём
+									li Проведение работ
+									li Уборка
+									li Гарантия 2 года
+									li Можно сразу клеить обои
+							button.btn.item__btn Заказать
+
+		section.feedback
+			.container
+				.feedback__title
+					h2 Отзывы
+				.feedback__slider
+					.feedback__item
+						.row
+							.col-lg-6
+								.fotorama
+									.feedback__photo
+									.feedback__photo
+									.feedback__photo
+									.feedback__photo
+									.feedback__photo
+									.feedback__photo
+					.feedback__item
+						.row
+							.col-lg-6
+								.fotorama
+									.feedback__photo
+									.feedback__photo
+									.feedback__photo
+									.feedback__photo
+									.feedback__photo
+									.feedback__photo
+					.feedback__item
+						.row
+							.col-lg-6
+
 		.popup
 			.popup__dialog
 				.popup__content
 					button.popup__close &times;
 					h4.popup__header Заинтересовало?
 					p Оставьте контактные данные для связи
-					.main__form.popup__form
+					.form__main.popup__form
 						form(action="#")
 							label.form__label(for='#') Ваше имя
 							input.form__input(type='text')
@@ -103,9 +200,8 @@ html(lang="ru-RU")
 							input.form__input(type='text')
 							label.form__label(for='#') Сообщение
 							textarea.form__input.textarea
-							button.btn.main__form-btn(type='submit') Оставьте заявку	
-
-	
+							button.btn.form__main-btn(type='submit') Оставьте заявку
 						
 	script(src="static/js/libs.min.js")
+	script(src="static/js/fotorama.js")
 	script(src="static/js/main.js")
